@@ -1,0 +1,919 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  #preloader {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: absolute;
+  }
+    
+  .logoimage {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: auto;
+  }
+
+  .ring {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    color: #000;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+  }
+
+  @keyframes ring {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 2px 5px 8px #ffc800;
+    }
+    50% {
+      transform: rotate(180deg);
+      box-shadow: 2px 5px 4px #19b900;
+    }
+    100% {
+      transform: rotate(360deg);
+      box-shadow: 2px 5px 4px #00a6ff;
+    }
+  }
+
+  .ring:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+
+  span {
+    color: #737373;
+    font-size: 27px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px; 
+    animation: text 3s ease-in-out linear infinite;
+  }
+
+  @keyframes text {
+    0% {
+      color: #737373;
+    }
+    50% {
+      color: white;
+    }
+  }
+
+  .header {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.8)), 
+      url('https://www.istafrica.co.tz/uploaded/images_2017-18/web/ist_0931.jpg');
+    }
+  
+  
+  nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  }
+  
+  .logoimage {
+    width: auto;
+    height: 75px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+  }
+  
+  .nav-links {
+    max-width: 1050px;
+    align-items: baseline;
+    position: fixed;
+    right: 0;
+    top: 0;
+    
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  .nav-links ul li a{
+    color: midnightblue;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  
+  
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) {
+      .header {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .nav {
+      width: 100%;
+    }
+    .nav-links ul li {
+      display: none;
+    }
+    .text-box h2 {
+      font-size: 75px;
+    }
+  }
+
+
+
+
+
+
+
+
+  .text-box {
+    width: 90%;
+    color: white;
+    position: relative;
+    top: 25%;
+    left: 4.5%;
+    transform: translate(-50,-50)
+  }
+  
+  .text-box h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .text-box h2 {
+    font-size: 100px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110px;
+    font-weight: 700;
+  }
+  
+  .text-box p {
+    margin: 25px auto;
+    color: white;
+    font-size: 16px;
+    max-width: 700px;
+  }
+  
+  .visitus {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 12px 34px;
+    border-radius: 10px;
+    position: relative;
+    background: transparent;
+    text-align: center;
+    margin: 50px 10px 45px;
+  }
+  
+  .visitus:hover {
+    border-radius: 20px;
+    border: 1px solid rgb(128, 210, 74);
+    background: rgb(128, 210, 74);
+    transition: 1s;
+  }
+  
+  
+  @media(max-width: 700px) {
+    .text-box h1 {
+    font-size: 30px;
+    }
+    .nav-links ul li {
+      display: none;
+    }
+    
+    .nav-links {
+      position: absolute;
+      background: lightgreen;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -300px;
+      text-align: left;
+      z-index: 2;
+    }
+    nav.fa {
+      display: block;
+      color: white;
+      margin: 10px;
+      cursor: pointer;
+    }
+    
+    .nav-links{
+      padding: 30px;
+    }
+  }
+
+  .sub-about-us ul:hover {
+    display: none;
+  }
+
+  .sub-about-us ul li:hover {
+    display: block;
+    color: white;
+    padding-block: 5px;
+  }
+
+  .sub-about-us ul li a:hover {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 20px;
+    border-bottom: 2px solid whitesmoke;
+
+  }
+
+  .sub-about-us:hover {
+    display: block;
+    background-color: rgb(0, 163, 0);
+    position: absolute;
+    top: 65;
+    width: 500px;
+  }
+  
+  
+  
+  .course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  h1{
+    font-size: 37px;
+    font-weight: 800;
+    color: midnightblue;
+    padding-bottom: 30px;
+  }
+  
+  p{
+    color: slategray;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .row {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+  
+  .course-col {
+    background: whitesmoke;
+    border-radius: 10px;
+    margin: 20px 12px;
+    color: black;
+    transition: 0.5s;
+    flex-wrap: wrap;
+    width: 31%;
+  }
+  
+  h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    padding-top: 10px;
+  }
+  
+  .course-col:hover {
+    box-shadow: 0 0 18px 0px rgba(0,0,0,0.3);
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .navy {
+    color: navy;
+  }
+  
+  
+  .yellow {
+    color: orange;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .ib {
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+  }
+  
+  .images {
+    max-width: 300px;
+    height: auto;
+    padding: 5px 4px;
+    border-radius: 25px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto 33px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+.images-col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+  .images h2 {
+    font-size: 30px;
+    color: midnightblue;
+    font-weight: 600;
+    margin-bottom: 200px;
+    margin-top: 8px;
+  }
+
+  .images img:hover {
+    box-shadow: 0 0 17px 0px rgba(12, 0, 230, 0.313) ;
+    transition: 0.7s;
+  }
+  
+  
+  
+  .admission {
+    min-height: 500px;
+    margin: auto;
+    text-align: center;
+    padding-top: 110px;
+    background-image: linear-gradient(rgba(4,9,20,0.4),rgba(4,9,20,0.4)), 
+      url(https://www.istafrica.com/uploaded/home_photos_2021/long/2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 0 30px 0px rgba(0,0,0,0.3);
+  }
+
+  .admission p {
+    color: white;
+  }
+
+  .admission h1 {
+    font-weight: 600;
+    padding-bottom: 55px;
+    font-size: 50px;
+    position: relative;
+    top: 0;
+    right: 0;
+    color: white;
+  }
+  
+  .moving-buttons button {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 35px 45px;
+    border-radius: 25px;   
+    font-size: 23px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+
+.moving-buttons span {
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.moving-buttons button:hover span {
+  width: 100%;
+}
+
+.moving-buttons button:hover {
+  border: none;
+}
+
+
+.admission button {
+  border: 2.5px solid rgb(128, 210, 74);
+}
+.visit button {
+  border: 2.5px solid orange;
+}
+.apply button {
+  border: 2.5px solid rgb(0, 0, 255);
+}
+
+.admission span{
+  background: rgb(128, 210, 74);
+}
+.visit span {
+background: orange;
+}
+.apply span {
+  background: navy;
+}
+
+
+
+
+  
+  .campus {
+    width: 87%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    min-height: 100vh;
+  }
+  
+  
+  .campus-col {
+    border-radius: 15px;
+    margin-bottom: 5%;
+    flex-basis: 32%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .campus-col img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+  
+  .campus-col h3 {
+    padding: 21px;
+    text-align: center;
+  }
+  
+  .science {
+    border-radius: 15px;
+  }
+  
+  .night {
+    border-radius: 15px;
+  }
+  
+  
+  .middle h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: navy;
+  }
+  
+  .row {
+    width: 100%;
+    border-radius: 15px;
+    padding-bottom: 160px;
+  }
+  
+  .layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 23px;
+    bottom: 0;
+    position: absolute;
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    color: slategray;
+    position: relative;
+    max-width: 85%;
+  }
+
+  .click {
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 15px;
+    position:absolute;
+    bottom: 40px;
+    right: 82px;
+    transition: 0.5s;
+  }
+  
+  .click:hover {
+    border-radius: 20px;
+    border: 2px solid orange;
+    background: orange;
+    color: white;
+    font-weight: 600;
+  }  
+
+
+  .partnership {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  .partnership h1 {
+    font-size: 22px;
+  }
+
+  .partnership p {
+    font-size: 15px;
+    font-weight: 700;
+    width: 65%;
+    padding: 0;
+  }
+
+  .logos {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+#affiliates-boxes-container {
+  display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.affiliate-box {
+  display: block;
+  color: transparent;
+  width: 120px;
+  height: 120px;
+  padding: 3px;
+  margin: 6px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.affiliate-box:hover {
+  box-sizing:border-box;
+  border: 2.5px solid orange;
+  border-radius: 20%;
+  transition: 0.3s;
+}
+
+body {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.float-right {
+  float: right;
+}
+
+label {
+  color: #414546;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 15px;
+}
+
+@media(min-width: 720px) {
+  .col-1-2 {
+    float: left;
+    width: calc(97.5%/2);
+  }
+
+  .col-1-2:not(:last-child) {
+    margin-right: 2.5%;
+  }
+
+  .col-1-3 {
+    float: left;
+    width: calc(95%/3);
+  }
+
+  .col-1-3:not(:last-child) {
+    margin-right: 2.5%;
+  }
+
+  .col-1-4 {
+    float: left;
+    width: calc(92.5%/4);
+  }
+
+  .col-1-4:not(:last-child) {
+    margin-right: 2.5%;
+  }
+}
+
+.button {
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.button-primary {
+  background-color: #0101c1;
+  border-radius: 15px;
+}
+
+.button-secondary {
+  background-color: #FFAA00;
+}
+
+.button-full {
+  width: 100%;
+}
+
+.button-small {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px 15px;
+}
+
+input,
+select,
+textarea {
+  background-color: #FFFFFF;
+  border: 1px solid #F2F3F5;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 3px 0 rgba(189,191,192,0.10);
+  height: 35px;
+  margin-bottom: 15px;
+  padding: 5px;
+  transition: border-color 0.5s ease;
+  width: 100%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 1px solid #42A5F5;
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.input-error {
+  border-color: #FC472E;
+}
+
+/* 6. Page Styles
+======================================== */
+.site-main {
+  padding: 60px 15px;
+  position: relative;
+}
+
+.col-1-2 {
+  text-align: left;
+  width: 40%;
+}
+
+.site-main-background {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),     
+  url("https://www.istafrica.co.tz/uploaded/documents/ElementaryDocuments/2018-19/Canteen_2018-19/Staff_Photo_2018.jpg");
+  height: 650px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.site-main-header {
+  margin-bottom: 30px;
+}
+
+.site-main-header h1,
+.site-main-header p {
+  color: #FFFFFF;
+}
+
+.section-header {
+  font-size: 30px;
+  line-height: 33px;
+  margin-bottom: 32px;
+  color: midnightblue;
+}
+
+
+
+.map p {
+color: #414546;
+display: block;
+font-size: 13px;
+font-weight: 500;
+line-height: 20px;
+}
+
+.footer {
+  background-color: rgb(47, 61, 75);
+  padding: 65px 0;
+  line-height: 1.5;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.container-row {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-col {
+  width: 25% 24% 25% 29% ;
+  padding: 0 70px;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -10;
+  background-color: rgb(0, 199, 0);
+  height: 4px;
+  width: 75px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.footer-col ul li {
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #bbbbbb;
+  display: block;
+}
+
+.footer-col ul li a{
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  padding-left: 10px;
+  color: white;
+}
+
+.footer-col .social-links a {
+  font-size: 24px;
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 20px 0;
+  text-align: center;
+  line-height: 80px;
+  height: 48px;
+  width: 48px;
+  background-color: rgb(255, 183, 0);
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: orange;
+  background-color: white;
+
+}
+
+.underev {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.underev h4{
+  color: white;
+  padding: 11px;
+}
+
+.myname {
+  text-align: right;
+  color: white;
+}
